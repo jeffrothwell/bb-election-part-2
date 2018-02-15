@@ -11,7 +11,9 @@ document.addEventListener("DOMContentLoaded", function() {
     });
     sortedCandidates.forEach(function(candidate){
       candidateLi = document.createElement('li');
+      voteForm = document.createElement('form');
       candidateLi.innerText = 'Name: ' + candidate.name + ', Votes: ' + candidate.votes;
+      candidateLi.append(voteForm);
       resultsListEl.appendChild(candidateLi);
     });
   })
